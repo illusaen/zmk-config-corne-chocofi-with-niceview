@@ -5,6 +5,7 @@
 #define PDN PG_DN
 #define VUP C_VOL_UP
 #define VDN C_VOL_DN
+#define BRK PAUSE_BREAK
 
 #define XXX &none
 #define ___ &trans
