@@ -1,4 +1,4 @@
-#define EQL EQUAL
+#define EQU EQUAL
 #define MIN MINUS
 #define CRT CARET
 #define PUP PG_UP
