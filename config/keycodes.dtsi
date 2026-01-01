@@ -1,0 +1,19 @@
+#define EQL EQUAL
+#define MIN MINUS
+#define CRT CARET
+#define PUP PG_UP
+#define PDN PG_DN
+#define VUP C_VOL_UP
+#define VDN C_VOL_DN
+
+#define XXX &none
+#define ___ &trans
+
+#define LNCH &kp LG(SPACE)
+#define SSHT &kp LS(LC(LG(N4)))
+#define CMNT &kp LG(SLASH)
+
+ZMK_MACRO(dbl_arrow, bindings = <&kp EQUAL &kp GT>;)
+ZMK_MACRO(sgl_arrow, bindings = <&kp MINUS &kp GT>;)
+ZMK_MACRO(js_interp, bindings = <&kp GRAVE &kp DOLLAR &kp LBRC &kp RBRC &kp GRAVE>;)
+ZMK_MACRO(js_fn, bindings = <&kp EQUAL &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC>;)
