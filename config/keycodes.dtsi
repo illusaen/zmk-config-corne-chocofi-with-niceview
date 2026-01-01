@@ -15,10 +15,10 @@
 #define SSHT  &kp LS(LC(LG(N4)))
 #define CMNT  &kp LG(SLASH)
 #define SAVE  &kp LG(S)
-#define CUT   &kp LG(X)
-#define COPY  &kp LG(C)
+#define MCUT  &kp LG(X)
+#define MCOPY &kp LG(C)
 #define PASTE &kp LG(V)
-#define UNDO  &kp LG(Z)
+#define MUNDO &kp LG(Z)
 #define REDO  &kp LG(LS(S))
 
 ZMK_MACRO(dbl_arrow, bindings = <&kp EQUAL &kp GT>;)

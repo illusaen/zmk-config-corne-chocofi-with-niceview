@@ -52,7 +52,7 @@
                         bindings = <
    &kp ESC   CASE_PATH CASE_CAPS NUMWORD   &kp TAB        SSHT &kp HOME &kp UP   &kp END   &kp DEL 
    &kp LALT  &kp LCTRL &kp LGUI  &kp LSHFT &kp LS(TAB)    LNCH &kp LEFT &kp DOWN &kp RIGHT &kp RET
-   SAVE      CUT       COPY      PASTE     UNDO           REDO &kp PUP  CMNT     &kp PDN   &kp BSPC
+   SAVE      MCUT      MCOPY     PASTE     MUNDO          REDO &kp PUP  CMNT     &kp PDN   &kp BSPC
                           	           ___ ___ ___   ___ ___ ___
                         >;
                 };
