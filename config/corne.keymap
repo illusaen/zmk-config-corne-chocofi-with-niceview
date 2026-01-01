@@ -93,7 +93,7 @@
 //          | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
    &kp F12 &kp F7 &kp F8 &kp F9 &kp BRK    &bt BT_SEL 0 &kp C_PREV &kp C_PP   &kp C_NEXT ___
-   &kp F11 &kp F4 &kp F5 &kp F6 &kp PUP    &kp BTCLR    &kp LSHFT  &kp LGUI   &kp LCTRL  &kp LALT
+   &kp F11 &kp F4 &kp F5 &kp F6 &kp PUP    &bt BT_CLR   &kp LSHFT  &kp LGUI   &kp LCTRL  &kp LALT
    &kp F10 &kp F1 &kp F2 &kp F3 &kp PDN    ___          &kp VUP    &kp C_MUTE &kp VDN    ___
                              ___ ___ ___   ___ ___ ___
                         >;
