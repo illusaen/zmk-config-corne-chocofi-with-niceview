@@ -30,99 +30,100 @@
                 compatible = "zmk,keymap";
 
                 BASE {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I   |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K   |  L  |  '  |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,   |  .  |  ;  |
 //             | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P   
-   &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SQT
-   &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp SEMI
-        &sl NUM &kp SPACE &mo NAV    &mo SYM &kp SPACE &kp BSPC
+   &kp Q       &kp W        &kp E       &kp R        &kp T     &kp Y &kp U        &kp I       &kp O        &kp P   
+   &hml LALT A &hml LCTRL S &hml LGUI D &hml LSHFT F &kp G     &kp H &hmr RSHFT J &hmr LGUI K &hmr LCTRL L &hmr LALT SQT
+   &kp Z       &kp X        &kp C       &kp V        &kp B     &kp N &kp M        &kp COMMA   &kp DOT      &kp SEMI
+                                  &sl NUM &kp SPACE &mo NAV    &mo SYM &kp SPACE &kp BSPC
                         >;
                 };
+                    
                 NAV {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// --------------------------------------------------------------------------------------------------
+// | ESC  | CASE_PATH  |  CASE_CAPS  | numword |  Tab   |   | ssht   | home |  up   |  end  |  del  |
+// | LA   | LC         | LG          | LS      | LS(Tb) |   | launch | left |  down | right | enter |
+// | save | cut        | copy        | paste   | undo   |   | redo   | pgup |  cmnt | pgdn  |  bspc |
+//                                 | NUM | SPC | NAV    |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                          	        ___ ___ ___   ___ ___ ___
+   &kp ESC   CASE_PATH CASE_CAPS NUMWORD   &kp TAB        SSHT &kp HOME &kp UP   &kp END   &kp DEL 
+   &kp LALT  &kp LCTRL &kp LGUI  &kp LSHFT &kp LS(TAB)    LNCH &kp LEFT &kp DOWN &kp RIGHT &kp RET
+   SAVE      CUT       COPY      PASTE     UNDO           REDO &kp PUP  CMNT     &kp PDN   &kp BSPC
+                          	           ___ ___ ___   ___ ___ ___
                         >;
                 };
 
                 SYM {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// -----------------------------------------------------------------
+// |  ~  | [] | {} | () |  &  |   |  !  |  ::   |  `  |  :  | del  |
+// |  -  |  | |  / |  = |  $  |   |  ?  |  @    |  ^  |  +  | ret  |
+// |  \  |  % |  # |  _ |  *  |   |  fn | `${}` |  => |  -> | back |
+//             | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
-   &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
-                    	     ___ ___ ___   ___ ___ ___
+   &kp TILDE     &bracket        &brace         &paren         &kp AMPS     &kp EXCL &dbl_col      &kp GRAVE       &kp COLON       &kp DEL
+   &hml LALT MIN &hml LCTRL PIPE &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT AT &hmr LGUI CARET &hmr LCTRL PLUS &hmr LALT RET
+   &kp BSLSH     &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
+                    	                                     ___ ___ ___   ___ ___ ___
                         >;
                 };
 
                 NUM {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | 1 | 2 | 3 | 4 | 5 |   | 6 | 7 | 8 | 9 | 0   |
+// | - | + | / | = | $ |   | ? | ( | ) | + | ret |
+// |   | . | # | * |   |   |   |   |   |   | bspc |
+//             | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                          	        ___ ___ ___   ___ ___ ___
+   &kp N1        &kp N2          &kp N3         &kp N4         &kp N5       &kp N6   &kp N7          &kp N8         &kp N9          &kp N0
+   &hml LALT MIN &hml LCTRL PLUS &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT LPAR &hmr LGUI RPAR &hmr LCTRL PLUS &hmr LALT RET
+   ___           &kp DOT         &kp HASH       &kp ASTRK      ___          ___      ___             ___            &kp DOT         &kp BSPC
+                          	                             ___ ___ ___   ___ ___ ___
                         >;
                 };
 
                 FN {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | f12 | f7 | f8 | f9 | BRK |   | BT0   | PREV | PLAY | NEXT |    |
+// | f11 | f4 | f5 | f6 | PUP |   | BTCLR | LS   | LG   | LC   | LA |
+// | f10 | f1 | f2 | f3 | PDN |   |       | VUP  | MUTE | VDN  |    |
+//          | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                          	        ___ ___ ___   ___ ___ ___
+   &kp F12 &kp F7 &kp F8 &kp F9 &kp BRK    &bt BT_SEL 0 &kp C_PREV &kp C_PP   &kp C_NEXT ___
+   &kp F11 &kp F4 &kp F5 &kp F6 &kp PUP    &kp BTCLR    &kp LSHFT  &kp LGUI   &kp LCTRL  &kp LALT
+   &kp F10 &kp F1 &kp F2 &kp F3 &kp PDN    ___          &kp VUP    &kp C_MUTE &kp VDN    ___
+                             ___ ___ ___   ___ ___ ___
                         >;
                 };
 
                 CASE_UNDER {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// ------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I   |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K   |  L  |  '  |
+// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,   |  .  |  ;  |
+//             | NUM | _ | NAV |   | SYM | _ | BSPC |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                          	        ___ ___ ___   ___ ___ ___
+   &kp Q       &kp W        &kp E       &kp R        &kp T     &kp Y &kp U        &kp I       &kp O        &kp P   
+   &hml LALT A &hml LCTRL S &hml LGUI D &hml LSHFT F &kp G     &kp H &hmr RSHFT J &hmr LGUI K &hmr LCTRL L &hmr LALT SQT
+   &kp Z       &kp X        &kp C       &kp V        &kp B     &kp N &kp M        &kp COMMA   &kp DOT      &kp SEMI
+                                  &sl NUM &kp UNDER &mo NAV    &mo SYM &kp UNDER &kp BSPC
                         >;
                 };
 
                 CASE_SLASH {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// ------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I   |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K   |  L  |  '  |
+// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,   |  .  |  ;  |
+//             | NUM | / | NAV |   | SYM | / | BSPC |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                          	        ___ ___ ___   ___ ___ ___
+   &kp Q       &kp W        &kp E       &kp R        &kp T     &kp Y &kp U        &kp I       &kp O        &kp P   
+   &hml LALT A &hml LCTRL S &hml LGUI D &hml LSHFT F &kp G     &kp H &hmr RSHFT J &hmr LGUI K &hmr LCTRL L &hmr LALT SQT
+   &kp Z       &kp X        &kp C       &kp V        &kp B     &kp N &kp M        &kp COMMA   &kp DOT      &kp SEMI
+                                  &sl NUM &kp SLASH &mo NAV    &mo SYM &kp SLASH &kp BSPC
                         >;
                 };
         };

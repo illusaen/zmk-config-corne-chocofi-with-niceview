@@ -9,14 +9,23 @@
 #define XXX &none
 #define ___ &trans
 
-#define LNCH &kp LG(SPACE)
-#define SSHT &kp LS(LC(LG(N4)))
-#define CMNT &kp LG(SLASH)
+#define NUMWORD &num_word NUM
+
+#define LNCH  &kp LC(SPACE)
+#define SSHT  &kp LS(LC(LG(N4)))
+#define CMNT  &kp LG(SLASH)
+#define SAVE  &kp LG(S)
+#define CUT   &kp LG(X)
+#define COPY  &kp LG(C)
+#define PASTE &kp LG(V)
+#define UNDO  &kp LG(Z)
+#define REDO  &kp LG(LS(S))
 
 ZMK_MACRO(dbl_arrow, bindings = <&kp EQUAL &kp GT>;)
 ZMK_MACRO(sgl_arrow, bindings = <&kp MINUS &kp GT>;)
 ZMK_MACRO(js_interp, bindings = <&kp GRAVE &kp DOLLAR &kp LBRC &kp RBRC &kp GRAVE>;)
 ZMK_MACRO(js_fn, bindings = <&kp EQUAL &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC>;)
+ZMK_MACRO(dbl_col, bindings = <&kp COLON &kp COLON>;)
 
 // Tap: left bracket/brace | double-tap: right version.
 ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT>, <&kp RBKT>;
