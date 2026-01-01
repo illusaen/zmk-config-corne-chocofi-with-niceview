@@ -66,7 +66,7 @@
                         bindings = <
    &kp TILDE     &bracket        &brace         &paren         &kp AMPS     &kp EXCL &dbl_col      &kp GRAVE       &kp COLON       &kp DEL
    &hml LALT MIN &hml LCTRL PIPE &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT AT &hmr LGUI CARET &hmr LCTRL PLUS &hmr LALT RET
-   &kp BSLSH     &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
+   &kp BSLH     &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
                     	                                     ___ ___ ___   ___ ___ ___
                         >;
                 };
