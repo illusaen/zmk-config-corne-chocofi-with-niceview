@@ -23,8 +23,8 @@
 
 #include "keycodes.dtsi"
 #include "autolayer.dtsi"
-#include "combos.dtsi"
 #include "layers.dtsi"
+#include "combos.dtsi"
 
 / {
         keymap {
