@@ -65,9 +65,9 @@
 // |  \  |  % |  # |  _ |  *  |   |  fn | `${}` |  => |  -> | back |
 //             | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp TILDE     &bracket        &brace         &paren         &kp AMPS     &kp EXCL &dbl_col      &kp GRAVE       &kp COLON       &kp DEL
-   &hml LALT MIN &hml LCTRL PIPE &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT AT &hmr LGUI CARET &hmr LCTRL PLUS &hmr LALT RET
-   &kp BSLH      &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
+   &kp TILDE     &bracket        &brace         &paren         &kp AMPS     &kp EXCL  &dbl_col      &kp GRAVE       &kp COLON       &kp DEL
+   &hml LALT MIN &hml LCTRL PIPE &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &kp QMARK &hmr RSHFT AT &hmr LGUI CARET &hmr LCTRL PLUS &hmr LALT RET
+   &kp BSLH      &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn    &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
                     	                                     ___ ___ ___   ___ ___ ___
                         >;
                 };
@@ -79,9 +79,9 @@
 // |   | . | # | * |   |   |   |   |   |   | bspc |
 //             | NUM | SPC | NAV |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp N1        &kp N2          &kp N3         &kp N4         &kp N5       &kp N6   &kp N7          &kp N8         &kp N9          &kp N0
-   &hml LALT MIN &hml LCTRL PLUS &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT LPAR &hmr LGUI RPAR &hmr LCTRL PLUS &hmr LALT RET
-   ___           &kp DOT         &kp HASH       &kp ASTRK      ___          ___      ___             ___            &kp DOT         &kp BSPC
+   &kp N1        &kp N2          &kp N3         &kp N4         &kp N5       &kp N6    &kp N7          &kp N8         &kp N9          &kp N0
+   &hml LALT MIN &hml LCTRL PLUS &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &kp QMARK &hmr RSHFT LPAR &hmr LGUI RPAR &hmr LCTRL PLUS &hmr LALT RET
+   ___           &kp DOT         &kp HASH       &kp ASTRK      ___          ___       ___             ___            &kp DOT         &kp BSPC
                           	                             ___ ___ ___   ___ ___ ___
                         >;
                 };
