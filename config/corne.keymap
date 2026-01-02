@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <behaviors/num_word.dtsi>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/36.h"
 
@@ -66,7 +67,7 @@
                         bindings = <
    &kp TILDE     &bracket        &brace         &paren         &kp AMPS     &kp EXCL &dbl_col      &kp GRAVE       &kp COLON       &kp DEL
    &hml LALT MIN &hml LCTRL PIPE &hml LGUI FSLH &hml LSHFT EQU &kp DLLR     &qexcl   &hmr RSHFT AT &hmr LGUI CARET &hmr LCTRL PLUS &hmr LALT RET
-   &kp BSLH     &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
+   &kp BSLH      &kp PRCNT       &kp HASH       &kp UNDER      &kp ASTRK    &js_fn   &js_interp    &dbl_arrow      &sgl_arrow      &kp BSPC
                     	                                     ___ ___ ___   ___ ___ ___
                         >;
                 };
