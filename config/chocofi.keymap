@@ -51,7 +51,7 @@
 // | save | cut        | copy        | paste   | undo   |   | redo   | pgup |  cmnt | pgdn  |  bspc |
 //                                 | NUM | SPC | NAV    |   | SYM | SPC | BSPC |
                         bindings = <
-   &kp ESC   CASE_PATH CASE_CAPS NUMWORD   &kp TAB        SSHT &kp HOME &kp UP   &kp END   &kp DEL 
+   &kp ESC   ___       &caps_word NUMWORD   &kp TAB        SSHT &kp HOME &kp UP   &kp END   &kp DEL 
    &kp LALT  &kp LCTRL &kp LGUI  &kp LSHFT &kp LS(TAB)    LNCH &kp LEFT &kp DOWN &kp RIGHT &kp RET
    SAVE      MCUT      MCOPY     PASTE     MUNDO          REDO &kp PUP  CMNT     &kp PDN   &kp BSPC
                           	           ___ ___ ___   ___ ___ ___
