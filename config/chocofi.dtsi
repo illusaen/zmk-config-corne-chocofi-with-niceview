@@ -15,7 +15,7 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    default_transform: keymap_transform_0 {
+    default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         columns = <10>;
         rows = <4>;
@@ -49,7 +49,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         compatible = "zmk,physical-layout";
         display-name = "chocofi";
         transform = <&default_transform>;
-        kscan = <&kscan0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   37       0     0     0>
