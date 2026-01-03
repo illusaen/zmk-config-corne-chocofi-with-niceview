@@ -20,9 +20,9 @@ ZMK_ADAPTIVE_KEY(
   /delete-property/ ignore-modifiers;
 };
 
-// ZMK_AUTO_LAYER(space_under, continue-list = <UNDER BSPC DEL>; ignore-alphas;)
-// ZMK_MACRO(case_cap, bindings = <&caps_word &space_under CASE_UNDER>;)
-// #define CASE_CAPS &case_cap
+ZMK_AUTO_LAYER(space_under, continue-list = <UNDER BSPC DEL>; ignore-alphas;)
+ZMK_MACRO(case_cap, bindings = <&caps_word &space_under CASE_UNDER>;)
+#define CASE_CAPS &case_cap
 
-// ZMK_AUTO_LAYER(space_slash, continue-list = <SLASH BSPC DEL>; ignore-alphas;)
-// #define CASE_PATH &space_slash CASE_SLASH
+ZMK_AUTO_LAYER(space_slash, continue-list = <SLASH BSPC DEL>; ignore-alphas;)
+#define CASE_PATH &space_slash CASE_SLASH
